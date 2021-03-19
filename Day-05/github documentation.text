@@ -1,0 +1,594 @@
+Day-01[15-03-2021]:
+==================
+Git => Offline to store the data 
+Github => Online to store it in cloud
+
+After creating a folder then we need to use git bash
+In gitbash we are going to create a file
+-> single file creation
+	=> touch filename.extension
+-> Multiple file creation
+	=> touch filename.extension filename.extension
+
+Commands to check the file or folder:
+=====================================
+-> ls => To check whether the files are created in it or not. It displays in row wise
+-> ls -a => hidden files are to be displayed
+-> ls -l => it displays all the files in list format
+
+Initialization of git:
+======================
+	-> git init => It will displays the master as default branch
+	-> git status => To check the file  or folders are in tracked or untracked state.
+	-> git add
+		=> git add filename.extension => single file adding
+		=> git add . => Multiple files adding
+	-> git commit -m "Something text" => tracked to be updated to move for online repository
+	
+	=> For single folder configuration:
+	===================================
+	-> git config user.email "your mailid" => To check who is going to modify the  data in local repository
+		=> git config user.email => To check the user email
+	-> git config user.name "your name" => To check who is going to modify the  data in local repository
+		=> git config user.name => To check the username
+		
+	=> For All Folders:
+	===================
+	-> git config --global user.email "your email"
+		=> git config user.email
+	-> git config --global user.name "your name"
+		=> git config user.name
+	
+	=> Create a repository in Your Github account and copy the repository url from code as "https"
+	
+	-> git remote add "remotename" "Online repository url"
+	
+	-> git remote => To check how many remotes are using for a particular folder
+	-> git remote -v => To check the pull and push urls for a particular folder
+	
+	=> Git Push => Offline => Online repository
+	-> git push remotename branchname
+	-> Error for first time upload to a repository then we need to use the command
+			=> git push -f remotename branchname
+	
+	=> Git Pull => Online => Offline repository
+	-> git pull remotename branchname
+	
+	Removing files in offline:
+	==========================
+	-> rm filename.extension
+		=> Here we need to commit and then push to online repository 
+	-> git rm filename.extension filename.extension
+		=> Here no need of using git add . directly we can commit then push it will updates to Online repository
+
+https://github.com/kavaliyugandhar/
+
+Day-02[16-03-2021]:
+===================
+C library
+
+H/w => internet => H/w[procees]
+
+Editor: Notepad,[geany,sublime,editplus,brackets]
+compiler: gcc compiler
+
+IDE's: [Editor+compiler]
+	Turboc++,Devc++,codeblocks,
+
+
+python:
+=======
+	Interpreter Language
+	Scripting[bash.sh,sample.py]
+
+Python Software:
+================
+	-> https://python.org
+	-> stable release [select your version and in that we need to download your operating bit]
+	
+Python Installation:
+====================
+	-> IDLE
+	-> Advanced Editors but we need to use interpreter to execute the .py files] 
+	-> Jupyter Notebook[Advanced executor for python and can be used in machine learning or in Artificial Inteligence]
+	
+	
+Python Concepts:
+================
+	-> varibles:
+		=> Storing a value and to change a value
+	-> operators:
+		-> arthemetic operations => +,-,*,//,/,**,%
+		-> logical => and,or,not
+		-> assignment => +=,-=,*=,/=,//=,%=
+		-> membership => in,not in
+		-> identity => is,is not
+		-> bitwise => &&,||,>>,<<
+		
+=> conditional statements:
+==========================
+ To check whether a given condition is either True or False
+		->if: for single case
+		Syntax: () => optional
+			if(condition):
+				//stmnts
+		->if-else: for two cases
+		Syntax: () => optional
+			if(condition):
+				//True stmnts
+			else:
+				//False stmnts
+		->elif: for two or more cases
+		Syntax: () => optional
+			if(condition-1):
+				//stmnt-1
+			elif (condition-2):
+				//stmnt-2
+			elif (condition-n):
+				//stmnt-n
+				| | | | | 
+			elif (condition-(n-1)):
+				//stmnt-(n-1)
+			else:
+				//stmnt
+		->nested if: => Two or more cases[Instead of this we can use logical operators to overcome this nested if]
+		Syntax:
+			if(condition-1):
+				if(condition-2):
+					//stmnt-1
+		
+		Syntax:
+			if(condition-1):
+				if(condition-2):
+					//stmnt-1
+				else:
+					//stmnt-2
+			else:
+				//stmnt-3
+			Here else is optional case we need to print the false statement we can use else part
+			 
+=> control statements,Loops,repitition,iterations:
+=======================================
+To execute a statement for n number of times untill it fails the condition
+	
+		-> for: Known Ranges
+		Syntax:
+			for iteration_Varaible in Iterator:
+				//stmnts
+				
+		-> while: Unknown Ranges [It works like known ranges also]
+		Syntax:
+			variable_initialization
+			while (condition):
+				//stmnts
+				
+=> Jumping statements:
+======================
+To exit or skips a iteration from a loop [These statements should be used within a loop]
+
+		-> continue -> Skips a particular iterationvalue
+		-> break -> Breaks the loop when a condition is satisfied
+	
+-> for	
+	for i in range(10):
+		print(i)
+		
+	for i in range(2,10):
+		print(i)
+		
+	for i in range(1,10,2):
+		print(i)
+		
+	s="satheesh"
+	for i in s:
+		print(i)
+	
+	for i in "Satheesh":
+		print(i)
+		
+	for i in [1,2,3]:
+		print(i)
+
+	a=[1,2,3]
+	for i in a:
+		print(i)
+
+a="satheesh"
+for i in range(len(a)+1):
+	print(i)
+for i in range(8):
+	print(i)
+l=[100,200,300]
+for i in range(len(l)+1):
+	print(l[i])
+
+Python Data Structures:
+=======================
+	-> Values can be stored in particular order format either in ascending or descending 
+	-> To Store the Data in Structural format
+	
+String:
+=======
+	-> Only Strings that should be in single or double quotes
+	-> Index is accessed and slicing can be done
+	-> Values can be changed but in memeory it doesnt
+	-> It allows duplicate elements but it shows based on index 
+	
+List:
+=====
+	-> Heterogeneous Data type elements
+	-> Index is accessed and slicing can be done
+	-> Values can be changed  
+	-> It allows duplicate elements
+	-> It can be represented by using "[]" 
+Set:
+====
+	-> Heterogeneous Data type elements
+	-> Index is not accessed and slicing can't be done
+	-> Values can be changed
+	-> It doesn't Allows duplicate elements 
+	-> It can be represented by using "{}" If a single value is placed in the set then it can be considered as se tif not by default it is considered as dictionary
+	 
+Tuple:
+======
+	-> Heterogeneous Data type elements
+	-> Index is accessed and slicing can be done
+	-> Values can't be changed
+	-> It allows duplicate elements
+	-> It can be represented as "()"
+	 
+Dictionary:
+===========
+	-> Heterogeneous Data type elements
+	-> Index is accessed and slicingcan be done for values
+	-> Combination of Key and value pair
+	-> It allows duplictae values for values but not the keys
+	-> It can be repreesented as "{}" if none is present in the set.
+
+Reverse of a number:
+====================
+	
+Input: 34534678436785
+
+Output: 
+	Given number is: 34534670436785
+	Reverse of a number 34534670436785 is: 58763407643543
+	Even numbers in a number 34534670436785 is: 4, 4, 6, 0, 4, 6, 8
+	Half of the even numbers in a number 34534670436785 is: 4 4 6 8 6 4 0
+	Sum of Half of the even number in a number 34534670436785 is: 16 
+
+Day-03[17-03-2021]:
+==================
+
+	-> To check the pip is installed in your system or not?
+		=> pip -V
+		Python Shell:
+		=============
+		=> import django
+		=> django.get_version()
+		cmd:
+		=====
+		=> django-admin --version
+		
+	-> django,flask,pyramid...etc
+	-> Django installation
+		-> cmd
+		-> pip install django for by default version
+		-> pip install django==3.0
+	 
+	-> Django introduction
+		-> features
+		-> secure
+		-> documentation
+		-> portable
+		-> scalble
+		-> heavy weight applications
+		-> huge libraries
+		-> objectoriented
+		
+		
+	-> Architecture patterns
+		-> MVC[Model View Controller]
+			-> model: db files
+			-> view:.html files[only .html]
+			-> controller:logics [.php,.java]
+		-> MVT[Model View Template]
+			-> model: db files
+			-> view: logics[.py]
+			-> Controller[views.py,urls.py]
+			-> template: .html
+	-> create project
+		-> django-admin startproject projectname(Carona)
+		-> python manage.py runserver( run server in locally)
+		
+	-> create app
+		-> django-admin startapp appname
+					(or)
+		-> python manage.py startapp appname
+		
+	=> Projectname[MCA] 
+		=> Appname [MCA][Admin App]
+			=> init.py -> Iterpereter will be considered as a python file
+			=> asgi -> Asynchronous gateway interface 
+			=> wsgi -> Web Socket gateway interface
+			=> settings -> handling project related info and all configurations are to be configured
+			=> urls-> all urls related info
+		=> Manage.py => Services
+			=>shell create purpose
+			=>[User] app creation
+			=>make migrations
+			=>migrate
+			=>create superuser
+			=>runserver
+	
+Django Project Execution:
+=========================
+	-> Open command prompt where your manage.py can be exists then we need to type the command
+		=> manage.py runserver  
+				(or)
+		=> python manage.py runserver => If the python is not configured in environment variables
+		         (or)
+		=> manage.py runserver "portnumber" => If you are facing any issues by default port numbers then we can change the port numbers as you defined
+		EX:
+			manage.py runserver 8569
+
+
+path():
+=======
+	path('url',filename.functionname,name="name of user url"),
+
+Packages:
+=========
+	-> Collection of Modules
+	-> similar to a folder
+	
+Modules:
+=========
+	-> Collection of functions,methods,classes or objects
+	-> similar to a file what it can perform
+	
+
+functions in python:
+====================
+
+Syntax:
+	def functiona_name(arguments):
+		return return_value
+
+
+Packages:
+=========
+	-> from packagename import modulename
+	Ex: modulename.functionname()
+	-> from packagename.modulename import functionname
+	Ex: packagename.modulname.functionname()
+
+Module:
+=======
+	-> import modulename
+	Ex: modulename.fucntionname()
+	
+	-> import *
+
+from packagename import modulename
+
+from MCA import views
+from MCA.MCA import views as "g"
+
+
+
+User App Creation:
+==================
+	-> we need to navigate to manage.py and then we need to type the command as
+		=> python django-admin startapp "appname"
+		=> django-admin startapp "appname"
+	-> In settings.py we need to configure the user app in INSTALLED_APP variable
+		=> INSTALLED_APP = {
+			"user_app_name",
+		}
+	-> migrations => ?
+	-> init -> Iterpereter will be considered as a python file
+	-> admin -> user table can be viewed by configuring here
+	-> apps -> just configuration
+	-> test -> unit testing,black box 
+	-> models -> Database [tablename,fields,datatype]
+	-> views -> logic [functions]
+	
+HttpResponse:
+=============
+
+	SIETK => 
+	settings.py => Installed_apps = {'SIETK',} 
+	urls => 
+		from SIETK import views 
+		
+		path('',views.home),
+	views =>
+		from django.http import HttpResponse
+		
+		def home(request):
+			return HttpResponse("Something message")
+	
+	HTML5
+	CSS3
+	Javascript -> X
+	Bootstrap -> X
+	classes
+	Constructor
+	Inheritance
+	Objects
+
+Day-04[18-03-2021]:
+==================	
+	
+	Controllers => urls -> views
+	
+	
+	HTML Tags => HttpResponse
+	
+	Dynamic Url Mapping:
+	====================
+	
+	https://localhost:8000/urlname/
+	
+	https://localhost:8000/urlname/value/
+	https://localhost:8000/sg/kiran/
+	
+	Hi Welcome Kiran 
+	
+	urls:
+	path('sample/<str:n>/',views.functionname),  
+	
+	views:
+	def functionname(rq,n):
+		return HttpResponse("Hi Welcome"+n)
+	
+HTML tags:
+==========
+
+html
+head
+body
+title
+script
+link
+a
+hr
+heading tags from h1 - h6
+div => Grid Systems [i webpage => 12 grids{columns}]
+table -> tr, td, thead, tbody
+p
+form
+input
+img
+button
+select
+iframe
+lists => ol, ul, li
+code
+pre
+abbr
+center => It shouldn't be used because it is deprecated
+audio
+video
+
+Templates:[It should contain only .html files]
+==============================================
+	templates => Exists in our app
+	
+	render(self_parameter,".html file where it exists[path location]",dictionary format)
+	
+	
+	urls -> views -> templates[.html]
+	
+Methods: 
+========
+		- get => by default, Values are to displayed in url of a browser, it can access less characters of data,  
+		- post => sensitive information, It can't be displayed in url of a browser, it can access 1024 characters of data  
+		 
+	 
+url: https://localhost:8000/table/12
+
+12 x 1 = 12
+12 x 2 = 24
+|    |    |
+|    |    |
+12 x 10 = 120
+
+
+Day-05[19-03-2021]:
+==================	
+
+https://github.com/AP-Skill-Development-Corporation/
+
+	41
+	
+	
+Create Project:
+===============
+	-> Go through the datefolder in cmd prompt
+	-> Type the comand to create a project
+		=> django-admin startproject Tourism
+	-> Then navigate to inner of Tourism project then type the command to create an app
+		=> django-admin startapp Chittoor
+	-> Open the project folder in sublime
+	
+	
+	html
+	
+	index.html
+		=> links [css,js,jquery,images]
+		=> include
+	navabar.html
+		=> href => link 
+	home.html => extends 
+	about.html => extends
+	
+	DTL:
+	===
+	
+	{{}} => Variable
+	
+	External Links
+		=> {% load static %} => external files
+		=> href="{% static 'path of .css,.js' %}"
+		=> src="{% static 'path of image' %}"
+		=> {% csrf_token %} => form
+	
+	Content View
+	{% block body %}
+		//change content
+	{% endblock %}
+	
+	Conditional statements:
+	=======================
+	{% if condition %}
+		//stmnts
+	{% endif %}
+	
+	Loops:
+	======
+	
+	{% for iteration_variable in iterator %}
+		//stmnt
+	{% endfor %}
+
+20F61F0001
+	
+	=> engineering.apssdc.in/register 
+	
+Models.py:
+==========
+
+create table tablename(
+	fieldnames datatype,
+);
+
+ORM:
+====
+	Object 
+	Relational 
+	Mapping
+	
+class classname(models.Model):
+	fieldname = models.datatype
+	
+
+cmd => server -> X
+* manage.py makemigrations
+	=> migrations -> [Interfacing File]
+		-> 0001_inital.py => [admin,user table]
+* manage.py migrate
+	=> appname_classname
+	
+db.sqlite3
+	-> db browser
+		-> table,records,fields
+
+	
+	
+
+
+
+
+
