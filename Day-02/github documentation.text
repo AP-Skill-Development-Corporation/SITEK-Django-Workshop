@@ -1,0 +1,270 @@
+Day-01[15-03-2021]:
+==================
+Git => Offline to store the data 
+Github => Online to store it in cloud
+
+After creating a folder then we need to use git bash
+In gitbash we are going to create a file
+-> single file creation
+	=> touch filename.extension
+-> Multiple file creation
+	=> touch filename.extension filename.extension
+
+Commands to check the file or folder:
+=====================================
+-> ls => To check whether the files are created in it or not. It displays in row wise
+-> ls -a => hidden files are to be displayed
+-> ls -l => it displays all the files in list format
+
+Initialization of git:
+======================
+	-> git init => It will displays the master as default branch
+	-> git status => To check the file  or folders are in tracked or untracked state.
+	-> git add
+		=> git add filename.extension => single file adding
+		=> git add . => Multiple files adding
+	-> git commit -m "Something text" => tracked to be updated to move for online repository
+	
+	=> For single folder configuration:
+	===================================
+	-> git config user.email "your mailid" => To check who is going to modify the  data in local repository
+		=> git config user.email => To check the user email
+	-> git config user.name "your name" => To check who is going to modify the  data in local repository
+		=> git config user.name => To check the username
+		
+	=> For All Folders:
+	===================
+	-> git config --global user.email "your email"
+		=> git config user.email
+	-> git config --global user.name "your name"
+		=> git config user.name
+	
+	=> Create a repository in Your Github account and copy the repository url from code as "https"
+	
+	-> git remote add "remotename" "Online repository url"
+	
+	-> git remote => To check how many remotes are using for a particular folder
+	-> git remote -v => To check the pull and push urls for a particular folder
+	
+	=> Git Push => Offline => Online repository
+	-> git push remotename branchname
+	-> Error for first time upload to a repository then we need to use the command
+			=> git push -f remotename branchname
+	
+	=> Git Pull => Online => Offline repository
+	-> git pull remotename branchname
+	
+	Removing files in offline:
+	==========================
+	-> rm filename.extension
+		=> Here we need to commit and then push to online repository 
+	-> git rm filename.extension filename.extension
+		=> Here no need of using git add . directly we can commit then push it will updates to Online repository
+
+https://github.com/kavaliyugandhar/
+
+Day-02[16-03-2021]:
+===================
+C library
+
+H/w => internet => H/w[procees]
+
+Editor: Notepad,[geany,sublime,editplus,brackets]
+compiler: gcc compiler
+
+IDE's: [Editor+compiler]
+	Turboc++,Devc++,codeblocks,
+
+
+python:
+=======
+	Interpreter Language
+	Scripting[bash.sh,sample.py]
+
+Python Software:
+================
+	-> https://python.org
+	-> stable release [select your version and in that we need to download your operating bit]
+	
+Python Installation:
+====================
+	-> IDLE
+	-> Advanced Editors but we need to use interpreter to execute the .py files] 
+	-> Jupyter Notebook[Advanced executor for python and can be used in machine learning or in Artificial Inteligence]
+	
+	
+Python Concepts:
+================
+	-> varibles:
+		=> Storing a value and to change a value
+	-> operators:
+		-> arthemetic operations => +,-,*,//,/,**,%
+		-> logical => and,or,not
+		-> assignment => +=,-=,*=,/=,//=,%=
+		-> membership => in,not in
+		-> identity => is,is not
+		-> bitwise => &&,||,>>,<<
+		
+=> conditional statements:
+==========================
+ To check whether a given condition is either True or False
+		->if: for single case
+		Syntax: () => optional
+			if(condition):
+				//stmnts
+		->if-else: for two cases
+		Syntax: () => optional
+			if(condition):
+				//True stmnts
+			else:
+				//False stmnts
+		->elif: for two or more cases
+		Syntax: () => optional
+			if(condition-1):
+				//stmnt-1
+			elif (condition-2):
+				//stmnt-2
+			elif (condition-n):
+				//stmnt-n
+				| | | | | 
+			elif (condition-(n-1)):
+				//stmnt-(n-1)
+			else:
+				//stmnt
+		->nested if: => Two or more cases[Instead of this we can use logical operators to overcome this nested if]
+		Syntax:
+			if(condition-1):
+				if(condition-2):
+					//stmnt-1
+		
+		Syntax:
+			if(condition-1):
+				if(condition-2):
+					//stmnt-1
+				else:
+					//stmnt-2
+			else:
+				//stmnt-3
+			Here else is optional case we need to print the false statement we can use else part
+			 
+=> control statements,Loops,repitition,iterations:
+=======================================
+To execute a statement for n number of times untill it fails the condition
+	
+		-> for: Known Ranges
+		Syntax:
+			for iteration_Varaible in Iterator:
+				//stmnts
+				
+		-> while: Unknown Ranges [It works like known ranges also]
+		Syntax:
+			variable_initialization
+			while (condition):
+				//stmnts
+				
+=> Jumping statements:
+======================
+To exit or skips a iteration from a loop [These statements should be used within a loop]
+
+		-> continue -> Skips a particular iterationvalue
+		-> break -> Breaks the loop when a condition is satisfied
+	
+-> for	
+	for i in range(10):
+		print(i)
+		
+	for i in range(2,10):
+		print(i)
+		
+	for i in range(1,10,2):
+		print(i)
+		
+	s="satheesh"
+	for i in s:
+		print(i)
+	
+	for i in "Satheesh":
+		print(i)
+		
+	for i in [1,2,3]:
+		print(i)
+
+	a=[1,2,3]
+	for i in a:
+		print(i)
+
+a="satheesh"
+for i in range(len(a)+1):
+	print(i)
+for i in range(8):
+	print(i)
+l=[100,200,300]
+for i in range(len(l)+1):
+	print(l[i])
+
+Python Data Structures:
+=======================
+	-> Values can be stored in particular order format either in ascending or descending 
+	-> To Store the Data in Structural format
+	
+String:
+=======
+	-> Only Strings that should be in single or double quotes
+	-> Index is accessed and slicing can be done
+	-> Values can be changed but in memeory it doesnt
+	-> It allows duplicate elements but it shows based on index 
+	
+List:
+=====
+	-> Heterogeneous Data type elements
+	-> Index is accessed and slicing can be done
+	-> Values can be changed  
+	-> It allows duplicate elements
+	-> It can be represented by using "[]" 
+Set:
+====
+	-> Heterogeneous Data type elements
+	-> Index is not accessed and slicing can't be done
+	-> Values can be changed
+	-> It doesn't Allows duplicate elements 
+	-> It can be represented by using "{}" If a single value is placed in the set then it can be considered as se tif not by default it is considered as dictionary
+	 
+Tuple:
+======
+	-> Heterogeneous Data type elements
+	-> Index is accessed and slicing can be done
+	-> Values can't be changed
+	-> It allows duplicate elements
+	-> It can be represented as "()"
+	 
+Dictionary:
+===========
+	-> Heterogeneous Data type elements
+	-> Index is accessed and slicingcan be done for values
+	-> Combination of Key and value pair
+	-> It allows duplictae values for values but not the keys
+	-> It can be repreesented as "{}" if none is present in the set.
+
+Reverse of a number:
+====================
+	
+Input: 34534678436785
+
+Output: 
+	Given number is: 34534670436785
+	Reverse of a number 34534670436785 is: 58763407643543
+	Even numbers in a number 34534670436785 is: 4, 4, 6, 0, 4, 6, 8
+	Half of the even numbers in a number 34534670436785 is: 4 4 6 8 6 4 0
+	Sum of Half of the even number in a number 34534670436785 is: 16 
+
+
+
+
+
+
+
+
+
+
+
+

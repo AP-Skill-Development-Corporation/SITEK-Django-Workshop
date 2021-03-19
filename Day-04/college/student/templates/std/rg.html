@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<style type="text/css">
+		form
+		{
+			text-align: center;
+			background-color: cadetblue;
+			margin-right: 230px;
+			margin-left: 230px;
+			padding-bottom: 23px;
+			padding-top:12px;
+		}
+		h2
+		{
+			background-color: black;
+			color:white;
+			margin-left: 20px;
+			margin-right: 20px;
+			border-radius: 5px 15px 15px 5px;
+			padding: 2px;
+		}
+		button
+		{
+			color:green;
+			border-radius: 20px;
+			background-color: lightblue;
+		}
+	</style>
+</head>
+<body>
+<form method="post">
+	{% csrf_token %}
+	<h2>User Registration</h2>
+	<label>Username: </label>
+	<input type="text" name="uname"><br/><br/>
+	<label>Password: </label>
+	<input type="password" name="pd"><br/><br/>
+	<button>Create</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,62 @@
+Day-01[15-03-2021]:
+==================
+Git => Offline to store the data 
+Github => Online to store it in cloud
+
+After creating a folder then we need to use git bash
+In gitbash we are going to create a file
+-> single file creation
+	=> touch filename.extension
+-> Multiple file creation
+	=> touch filename.extension filename.extension
+
+Commands to check the file or folder:
+=====================================
+-> ls => To check whether the files are created in it or not. It displays in row wise
+-> ls -a => hidden files are to be displayed
+-> ls -l => it displays all the files in list format
+
+Initialization of git:
+======================
+	-> git init => It will displays the master as default branch
+	-> git status => To check the file  or folders are in tracked or untracked state.
+	-> git add
+		=> git add filename.extension => single file adding
+		=> git add . => Multiple files adding
+	-> git commit -m "Something text" => tracked to be updated to move for online repository
+	
+	=> For single folder configuration:
+	===================================
+	-> git config user.email "your mailid" => To check who is going to modify the  data in local repository
+		=> git config user.email => To check the user email
+	-> git config user.name "your name" => To check who is going to modify the  data in local repository
+		=> git config user.name => To check the username
+		
+	=> For All Folders:
+	===================
+	-> git config --global user.email "your email"
+		=> git config user.email
+	-> git config --global user.name "your name"
+		=> git config user.name
+	
+	=> Create a repository in Your Github account and copy the repository url from code as "https"
+	
+	-> git remote add "remotename" "Online repository url"
+	
+	-> git remote => To check how many remotes are using for a particular folder
+	-> git remote -v => To check the pull and push urls for a particular folder
+	
+	=> Git Push => Offline => Online repository
+	-> git push remotename branchname
+	-> Error for first time upload to a repository then we need to use the command
+			=> git push -f remotename branchname
+	
+	=> Git Pull => Online => Offline repository
+	-> git pull remotename branchname
+	
+	Removing files in offline:
+	==========================
+	-> rm filename.extension
+		=> Here we need to commit and then push to online repository 
+	-> git rm filename.extension filename.extension
+		=> Here no need of using git add . directly we can commit then push it will updates to Online repository
