@@ -1,0 +1,16 @@
+{% extends 'ctr/index.html' %}
+{% block body %}
+<div class="container">
+	<div class="card col-md-6 mx-auto bg-info mt-3 shadow-lg">
+		<h2 class="text-white bg-dark p-3 mt-2 text-center border rounded">Registration</h2>
+		<div class="card-body">
+			<form method="post">
+				{% csrf_token %}
+				<input type="text" name="uname" class="form-control my-2" placeholder="Username" required>
+				<input type="password" name="pwd" class="form-control my-2" placeholder="password" required>
+				<input type="submit" value="Register" class="btn btn-success my-2">
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock %}
